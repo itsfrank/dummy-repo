@@ -2,6 +2,7 @@ use clap::{Parser, Subcommand, ValueEnum};
 
 #[derive(Parser)]
 #[command(name = "cli-project")]
+#[command(version)]
 #[command(about = "A simple CLI with foo, bar, baz, and animal commands")]
 struct Cli {
     #[command(subcommand)]
