@@ -1,8 +1,8 @@
-use clap::{Parser, Subcommand};
+use clap::{Parser, Subcommand, ValueEnum};
 
 #[derive(Parser)]
 #[command(name = "cli-project")]
-#[command(about = "A simple CLI with foo, bar, and baz commands")]
+#[command(about = "A simple CLI with foo, bar, baz, and animal commands")]
 struct Cli {
     #[command(subcommand)]
     command: Commands,
@@ -16,6 +16,22 @@ enum Commands {
     Bar,
     /// Run the baz command
     Baz,
+    /// Print a cute animal
+    Animal {
+        /// The type of animal to print
+        #[arg(value_enum)]
+        animal: AnimalType,
+    },
+}
+
+#[derive(ValueEnum, Clone, Debug)]
+enum AnimalType {
+    /// A cute cat
+    Cat,
+    /// A cute bird
+    Bird,
+    /// A cute snake
+    Snake,
 }
 
 fn main() {
@@ -31,5 +47,24 @@ fn main() {
         Commands::Baz => {
             println!("baz command was run");
         }
+        Commands::Animal { animal } => match animal {
+            AnimalType::Cat => {
+                println!(" /\\_/\\");
+                println!("( o.o )");
+                println!(" > ^ <");
+            }
+            AnimalType::Bird => {
+                println!("   \\");
+                println!("  (\\");
+                println!("_o/\\_");
+            }
+            AnimalType::Snake => {
+                println!("  ____");
+                println!(" /    \\");
+                println!("(  o o  )");
+                println!(" \\~~~~~/");
+                println!("  |||||");
+            }
+        },
     }
 }
