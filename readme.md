@@ -5,6 +5,9 @@ A simple Rust CLI application with commands: foo, bar, baz, and animal.
 ## Usage
 
 ```bash
+# Show version
+cargo run -- --version
+
 # Run the foo command
 cargo run -- foo
 
