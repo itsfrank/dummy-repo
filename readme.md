@@ -1,6 +1,6 @@
 # CLI Project
 
-A simple Rust CLI application with commands: foo, bar, baz, and animal.
+A simple Rust CLI application with commands: foo, bar, baz, animal, and tutorial.
 
 ## Usage
 
@@ -19,6 +19,9 @@ cargo run -- baz
 
 # Run the animal command
 cargo run -- animal <animal-type>
+
+# Run the tutorial command
+cargo run -- tutorial
 ```
 
 ## Commands
@@ -30,4 +33,5 @@ cargo run -- animal <animal-type>
   - **cat**: Prints a cute cat
   - **bird**: Prints a cute bird
   - **snake**: Prints a cute snake
+- **tutorial**: Interactive tutorial that teaches you about all the other commands
 
