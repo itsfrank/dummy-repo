@@ -59,11 +59,13 @@ fn main() {
                 println!("_o/\\_");
             }
             AnimalType::Snake => {
-                println!("  ____");
-                println!(" /    \\");
-                println!("(  o o  )");
-                println!(" \\~~~~~/");
-                println!("  |||||");
+                println!("      ____");
+                println!("     /    \\");
+                println!("    (  o o  )");
+                println!("     \\~~~~~/");
+                println!("   __||||||||__");
+                println!("  /            \\");
+                println!(" (______________)")
             }
         },
     }
