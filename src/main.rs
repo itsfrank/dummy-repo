@@ -31,6 +31,7 @@ enum AnimalType {
     /// A cute bird
     Bird,
     /// A cute snake
+    #[clap(alias = "snek")]
     Snake,
 }
 
@@ -59,13 +60,28 @@ fn main() {
                 println!("_o/\\_");
             }
             AnimalType::Snake => {
-                println!("      ____");
-                println!("     /    \\");
-                println!("    (  o o  )");
-                println!("     \\~~~~~/");
-                println!("   __||||||||__");
-                println!("  /            \\");
-                println!(" (______________)")
+                println!("       ____");
+                println!("      / o o\\");
+                println!("     |  >   |");
+                println!("      \\____/");
+                println!("         |");
+                println!("       __|");
+                println!("      |");
+                println!("      |__");
+                println!("         |");
+                println!("       __|");
+                println!("      |");
+                println!("      |__");
+                println!("         |");
+                println!("        /");
+                println!("       /");
+                println!("      /");
+                println!("     /");
+                println!("    /");
+                println!("   |");
+                println!("   |");
+                println!("  /");
+                println!(" /");
             }
         },
     }
